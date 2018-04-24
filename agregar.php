@@ -69,12 +69,5 @@ require_once('inc/head.php');
 
 
 <?php include 'inc/footer.php';?>
-
-<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/ed-grid.js"></script>
-<script type="text/javascript" src="js/efectos.js"></script>
-<script type="text/javascript">
-  edgrid.menu('nav','menu');
-</script>
 </body>
 </html>

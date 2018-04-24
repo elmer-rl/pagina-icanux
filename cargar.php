@@ -1,10 +1,8 @@
-<?php require_once ('../conexion.php');
-
+<?php require_once ('conexion.php');
 //valdidar formulario
 //
 if (!isset($_POST['paginar']) || $_POST['paginar'] == '') {exit;
 }
-
 $_SESSION['paginacion'] += $porpagina;
 $indice = $_SESSION['paginacion'];
 
@@ -13,10 +11,7 @@ $accion_cargar = "SELECT * FROM post ORDER BY id DESC LIMIT $indice,$porpagina";
 $consulta_cargar = mysqli_query($conexion, $accion_cargar);
 $datos_cargar    = mysqli_fetch_assoc($consulta_cargar);
 $cantidad_cargar = mysqli_num_rows($consulta_cargar);
-
 ?>
-
-
 <?php if ($cantidad_cargar != 0) {
 do {
 
@@ -29,9 +24,9 @@ $partes   = explode('####', $imagenes);
 <div class="ed-item m-25 l-25">
 
 <?php if ($imagenes != '') {?>
-<img src=" <?php echo $dato[0];?>img/upload/<?php echo $partes[0];?>">
+<img src="static/img/upload/<?php echo $partes[0];?>">
 <?php } else {?>
-<img src="<?php echo $dato[0];?>img/HELMI1.png">
+<img src=static/img/HELMI1.png">
 <?php }?>
 
 </div>

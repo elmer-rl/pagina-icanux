@@ -183,13 +183,9 @@ require_once('inc/head.php');
 														$('.events').append("<li>after event fired.</li>");
 													}
 												});
-
 											})  ;
 										</script>
-
         <?php include 'inc/footer.php';?>
-        <script type="text/javascript" src="<?php echo $dato[0];?>js/base.js"></script>
-        <script type="text/javascript" src="<?php echo $dato[0];?>/js/efectos.js"></script>
     </body>
 </html>
 <?php mysqli_free_result($consulta_post);mysqli_free_result($consulta_comen);?>

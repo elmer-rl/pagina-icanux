@@ -30,9 +30,9 @@ require_once('inc/head.php');
 <body class="fondo-oscuro">
 
 
-<?php include ('inc/header.php');?>
+	<?php include ('inc/header.php');?>
 
-<?php include ('inc/menu.php');?>
+	<?php include ('inc/menu.php');?>
 
 
 
@@ -51,48 +51,48 @@ require_once('inc/head.php');
 				<div id="listar">
 
 
-<?php
+					<?php
 
-if ($cantidad_post != 0) {
-	do {
+					if ($cantidad_post != 0) {
+						do {
 
-		$imagenes = $datos_post['image'];
-		$partes   = explode('####', $imagenes);
+							$imagenes = $datos_post['image'];
+							$partes   = explode('####', $imagenes);
 
-		?>
-		<div class="fila">
-																	<div class="columna columna-m-3 columna-g-3">
+							?>
+							<div class="fila">
+								<div class="columna columna-m-3 columna-g-3">
 
-		<?php if ($imagenes != '') {?>
-																						<img src=" img/upload/<?php echo $partes[0];?>">
-			<?php } else {?>
-																						<img src="img/HELMI1.png">
-			<?php }?>
+									<?php if ($imagenes != '') {?>
+									<img src=" img/upload/<?php echo $partes[0];?>">
+									<?php } else {?>
+									<img src="img/HELMI1.png">
+									<?php }?>
 
-																	</div>
-																	<div class="columna columna-m-9 columna-g-9">
-																		<h1><a href=" post/<?php echo $datos_post['seo'];?> " style="color: aqua;"><?php echo $datos_post['title'];
-		?></a> </h1>
-		<?php echo substr(strip_tags($datos_post['content']), 0, 1000);?><br><br>
-																			<div class="etiqueta etiqueta-pequenia" style="background-color: black; border-color:orange;">
-																				<p style="color:orange;">
-																					Publicado el  dia <strong><?php echo date('d/m/Y H:i', strtotime($datos_post['fecha']));?></strong>
-																				</p></div>
-																				<br> <br>
-		<?php echo $datos_post['category'];?>
-		</div>
+								</div>
+								<div class="columna columna-m-9 columna-g-9">
+									<h1><a href=" post/<?php echo $datos_post['seo'];?> " style="color: aqua;"><?php echo $datos_post['title'];
+										?></a> </h1>
+										<?php echo substr(strip_tags($datos_post['content']), 0, 1000);?><br><br>
+										<div class="etiqueta etiqueta-pequenia" style="background-color: black; border-color:orange;">
+											<p style="color:orange;">
+												Publicado el  dia <strong><?php echo date('d/m/Y H:i', strtotime($datos_post['fecha']));?></strong>
+											</p></div>
+											<br> <br>
+											<?php echo $datos_post['category'];?>
+										</div>
 
-																		</div>
+									</div>
 
-		<?php } while ($datos_post = mysqli_fetch_assoc($consulta_post));
-} else {?>
-	<div class="alerta alerta-rojo">
+									<?php } while ($datos_post = mysqli_fetch_assoc($consulta_post));
+								} else {?>
+								<div class="alerta alerta-rojo">
 
-				No se econtro el post .....
-			</div>
+									No se econtro el post .....
+								</div>
 
-	<?php }?>
-</div>
+								<?php }?>
+							</div>
 
 
 
@@ -100,8 +100,8 @@ if ($cantidad_post != 0) {
 
 						<aside class="columna columna-m-3 columna-g-3">
 
-<?php include ('inc/sidebar.php');?>
-</aside>
+							<?php include ('inc/sidebar.php');?>
+						</aside>
 
 					</div>
 
@@ -112,16 +112,7 @@ if ($cantidad_post != 0) {
 
 
 
-<?php include ('inc/footer.php');?>
-
-
-
-
-
-
-
-				<script src="js/base.js"></script>
-				<script src="js/efectos.js"></script>
+				<?php include ('inc/footer.php');?>
 			</body>
 			</html>
-<?php mysqli_free_result($consulta_post);?>
+			<?php mysqli_free_result($consulta_post);?>

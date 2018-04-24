@@ -1,10 +1,6 @@
-<?php require_once ('../conexion.php');
+<?php require_once ('conexion.php');
 
 $menu = 'usuario';
-
-if (!isset($_GET['iduser'])) {header('location:'.$dato[0]);
-}
-
 $iduser = $_GET['iduser'];
 //consultar datos del user
 $accion_usuario = sprintf("SELECT * FROM users WHERE id=$iduser AND name=%s",
@@ -16,23 +12,10 @@ $cantidad_usuario = mysqli_num_rows($consulta_usuario);
 if ($cantidad_usuario == 0) {header('location:'.$dato[0]);
 }
 
-if ($datos_usuario['id'] == $_SESSION['iduser']) {header('location:'.$dato[0].'user/perfil')
-	?>
-			<!DOCTYPE html>
-			<html lang="en">
-			<head>
-			 <meta charset="UTF-8">
-			 <title>perfil de <?php echo $datos_usuario['user'];
-}
-?></title>
- <link rel="shorcut icon" type="image/x-icon" href="<?php echo $dato[0];?>img/HELMI1.ico">
- <link rel="stylesheet" type="text/css" href="css/normalize.css">
- <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/font-awesome.min.css">
- <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/base.css">
- <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/styles.css">
- <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/my-style.css">
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-</head>
+if ($datos_usuario['id'] == $_SESSION['iduser']) {header('location:'.$dato[0].'user/perfil');}
+
+require_once('../inc/head.php')	
+?>
 <body>
 <?php include '../inc/header.php';?>
   <div class="main-content relleno-8 borde-negro" style="min-height: 600px;">

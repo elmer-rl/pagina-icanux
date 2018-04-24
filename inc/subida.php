@@ -10,8 +10,8 @@ if ($_FILES['imagenavatar']['type'] == 'image/gif' || $_FILES['imagenavatar']['t
 	//subir el fichero
 	$extension = explode('/', $_FILES['imagenavatar']['type']);
 
-	$nombre = $_SESSION['iduser'].'.'.$extension[1];
-	move_uploaded_file($_FILES['imagenavatar']['tmp_name'], '../user/avatar/'.$nombre);
+	$nombre = $_SESSION['iduser'].'.'.$extension[1];	
+	move_uploaded_file($_FILES['imagenavatar']['tmp_name'], '../static/avatar/'.$nombre);
 
 	//Actualizar el avatar
 	$accion_subiravatar = sprintf("UPDATE users SET avatar=%s WHERE id=%s",
@@ -20,7 +20,7 @@ if ($_FILES['imagenavatar']['type'] == 'image/gif' || $_FILES['imagenavatar']['t
 
 	$consulta_subiravatar = mysqli_query($conexion, $accion_subiravatar) or die(mysqli_error());
 
-	echo $dato[0].'user/avatar/'.$nombre;
+	echo $dato[0].'static/avatar/'.$nombre;
 
 } else {
 	exit;

@@ -14,7 +14,9 @@ require_once('inc/head.php');
 <div class="main-content">
 <div class="ed-container">
 <div class="ed-item m-75 l-75">
-	<h1>Acuerdos del dia de hoy</h1>
+	<div class="main-center">
+		<h1>Acuerdos Internos</h1>
+	</div>
 	<div id="listar">
 		<?php
 		if ($cantidad_post != 0) {
@@ -25,15 +27,17 @@ require_once('inc/head.php');
 				<div class="ed-container">
 					<div class="ed-item m-25 l-25">
 						<?php if ($imagenes != '') {?>
-						<img src=" <?php echo $dato[0];?>img/upload/<?php echo $partes[0];?>">
+						<img src=" static/img/upload/<?php echo $partes[0];?>">
 						<?php } else {?>
-						<img src="<?php echo $dato[0];?>img/HELMI1.png">
+						<img src="static/img/HELMI1.png">
 						<?php }?>
 					</div>
 					<div class="ed-item m-75 l-75">
 						<h2><a href=" <?php echo $dato[0];?>postt/<?php echo $datos_post['seo'];?>" class="title-pub"><?php echo $datos_post['title'];
 							?></a> </h2>
+							<p>
 							<?php echo substr(strip_tags($datos_post['content']), 0, 1000);?>
+							</p>
 							<div class="etiqueta etiqueta-pequenia">
 								<p>
 									Publicado el  dia <strong><?php echo date('d/m/Y H:i', strtotime($datos_post['fecha']));?></strong>
@@ -54,12 +58,6 @@ require_once('inc/head.php');
 		</div>
 	</div>
 	<?php include 'inc/footer.php';?>
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="js/ed-grid.js"></script>
-	<script type="text/javascript" src="js/efectos.js"></script>
-	<script type="text/javascript">
-		edgrid.menu('nav','menu');
-	</script>
 </body>
 </html>
 <?php mysqli_free_result($consulta_post);

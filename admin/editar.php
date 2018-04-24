@@ -27,11 +27,11 @@ $menformato = htmlentities($datos_editar['content'], ENT_COMPAT, 'utf-8');
 <head>
 	<meta charset="UTF-8">
 	<title>editar</title>
-  <link rel="shorcut icon" type="image/x-icon" href="<?php echo $dato[0];?>img/HELMI1.ico">
-  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/base.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/style.css">
+  <link rel="shorcut icon" type="image/x-icon" href="<?php echo $dato[0];?>static/img/HELMI1.ico">
+  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>static/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>static/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>static/css/base.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>static/css/style.css">
   <script type="text/javascript" src="<?php echo $dato[0];?>ckeditor/ckeditor.js" ></script>
 
 
@@ -143,10 +143,6 @@ $menformato = htmlentities($datos_editar['content'], ENT_COMPAT, 'utf-8');
 
 <?php include '../inc/footer.php';?>
 
-
-<script type="text/javascript" src="<?php echo $dato[0];?>js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="<?php echo $dato[0];?>js/base.js"></script>
-<script type="text/javascript" src="<?php echo $dato[0];?>js/efectos.js"></script>
 </body>
 </html>
 

@@ -35,9 +35,9 @@ if ($cantidad_post != 0) {
 			<div class="ed-item l-25 m-25">
 
 				<?php if ($imagenes != '') {?>
-				<img src=" <?php echo $dato[0];?>img/upload/<?php echo $partes[0];?>">
+				<img src="static/img/upload/<?php echo $partes[0];?>">
 				<?php } else {?>
-				<img src="<?php echo $dato[0];?>img/HELMI1.png">
+				<img src="static/img/HELMI1.png">
 				<?php }?>
 
 			</div>
@@ -74,15 +74,7 @@ if ($cantidad_post != 0) {
 
 	</div>
 </div>
-<div  style="max-width: 100%;">
 	<?php include 'inc/footer.php';?>
-
-	<script type="text/javascript" src="<?php echo $dato[o];?>js/ed-grid.js"></script>
-	<script type="text/javascript" src="<?php echo $dato[0];?>js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="<?php echo $dato[0];?>/js/efectos.js"></script>
-	<script type="text/javascript">
-		edgrid.menu('nav','menu');
-	</script>
 </body>
 </html>
 

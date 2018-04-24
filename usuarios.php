@@ -25,7 +25,7 @@ require_once('inc/head.php');
 	?>
 	         <div class="ed-item  s-50 m-20 l-20">
 	          <a href=" <?php echo $dato[0].'perfil/'.$datos_users['id'].'/'.$datos_users['name'];?> ">
-	            <img class="imgusuario" id="imgusuario" src="user/avatar/<?php echo $datos_users['avatar'];?>"> <br>
+	            <img class="imgusuario" id="imgusuario" src="static/avatar/<?php echo $datos_users['avatar'];?>"> <br>
 	<?php echo $datos_users['name'];
 	?></a>
 	          </div> 	<?php }?>
@@ -36,12 +36,6 @@ require_once('inc/head.php');
     </div>
   </div>
 <?php include 'inc/footer.php';?>
-<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/ed-grid.js"></script>
-  <script type="text/javascript" src="js/efectos.js"></script>
-  <script type="text/javascript">
-    edgrid.menu('nav','menu');
-  </script>
 </body>
 </html>
 

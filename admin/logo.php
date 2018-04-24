@@ -45,11 +45,11 @@ if (isset($_FILES['logo'])) {
 <head>
  <meta charset="UTF-8">
  <title>Editar logo</title>
- <link rel="shorcut icon" type="image/x-icon" href="<?php echo $dato[0];?>img/HELMI1.ico">
- <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/font-awesome.min.css">
- <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/base.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/styles.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/my-style.css">
+ <link rel="shorcut icon" type="image/x-icon" href="<?php echo $dato[0];?>static/img/HELMI1.ico">
+ <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>static/css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>static/css/base.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>static/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>static/css/my-style.css">
 <script type="text/javascript" src="<?php echo $dato[0];?>js/jquery-3.2.1.min.js"></script>
  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>

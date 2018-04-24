@@ -27,9 +27,9 @@ require_once('inc/head.php');
 										<div class="ed-item m-25 l-25">
 
 		<?php if ($imagenes != '') {?>
-												<img src=" <?php echo $dato[0];?>img/upload/<?php echo $partes[0];?>">
+												<img src=" <?php echo $dato[0];?>static/img/upload/<?php echo $partes[0];?>">
 			<?php } else {?>
-			<img src="img/HELMI1.png">
+			<img src="static/img/HELMI1.png">
 			<?php }?>
 
 										</div>
@@ -54,6 +54,7 @@ require_once('inc/head.php');
 }?>
 </div>
 						</div>
+						
 
 						<div class="ed-item m-25 l-25">
 
@@ -65,10 +66,6 @@ require_once('inc/head.php');
 				<center>
 					<div  >
 <?php include 'inc/footer.php';?>
-
-						<script type="text/javascript" src="<?php echo $dato[0];?>js/jquery-3.2.1.min.js"></script>
-						<script type="text/javascript" src="<?php echo $dato[0];?>js/base.js"></script>
-						<script type="text/javascript" src="<?php echo $dato[0];?>/js/efectos.js"></script>
 					</body>
 					</html>
 

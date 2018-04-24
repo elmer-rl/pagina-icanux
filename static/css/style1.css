@@ -26,14 +26,6 @@ header {
 	padding: 0px;
 }
 
-footer{
-	background-color: black;
-	padding: 16px;
-	color: white;
-	text-align: center;
-	font-size: 13px;
-}
-
 
 #f-i{
 	background-image: url(../img/bg.jpeg);
@@ -53,6 +45,10 @@ margin-top: 15px;
     background-position: 50%;
     border-radius: 50%;
    
+}
+
+.logo-helmi{
+	width: 250px;
 }
 .form{
 	   

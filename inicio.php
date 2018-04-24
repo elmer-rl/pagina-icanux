@@ -2,14 +2,14 @@
 $menu = 'index';
 require_once('inc/head.php');
 ?>
-<body class="body">
+<body>
   <?php require_once ('inc/header.php');?>
   <div class="cabecera" id="f-i">
     <div class="main-content ed-container main-center">
       <form  class="form">
         <div class="main-center">
          <div class="icon-ii">
-           <img src="static/img/LOGO-ICANUX.png" style="width: 250px;"></div>
+           <img src="static/img/LOGO-ICANUX.png" class="logo-helmi"></div>
          </div>
          <br>
          <div class="ed-container">
@@ -29,8 +29,7 @@ require_once('inc/head.php');
 
 
 
-    <div class="ed-container main-center ">
-
+    <div class="ed-container icon-redes">
       <aside class="ed-item l-1-3 m-1-3">
         <div class="sidebar-block">
           <div>
@@ -70,7 +69,7 @@ require_once('inc/head.php');
 
   </div>
 
-  <div class="main-content">
+  <div class="main-content main-conainer-article">
     <div class="ed-container main-center">
       <div class="nosotros">
         <h1>nosotros</h1>
@@ -144,23 +143,24 @@ require_once('inc/head.php');
       <dib class="ed-item m-50 l-50">
         <h2>¿Qué es el software libre?</h2>
 
-        <blockquote ><p>
+        <p>
           ¿Tiene alguna pregunta acerca de las licencias de software libre que no esté
           respondida aquí? Consulte nuestra otra <a href="http://www.fsf.org/licensing">información sobre licencias</a>, y si es
           necesario contacte con el Compliance Lab de la FSF en <a
-          href="mailto:licensing@fsf.org">licensing@fsf.org</a>.</p>
-        </blockquote>
+          href="mailto:licensing@fsf.org">licensing@fsf.org</a>
+          </p>
+        
 
       </dib>
       <dib class="ed-item m-50 l-50">
-        <img src="img/images.png">
+        <img src="static/img/images.png">
       </dib>
     </div>
   </div>
 
-  <div class="main-content">
+  <div class="main-content main-conainer-article">
     <div class="ed-container">
-      <div class="ed-item m-50">
+      <div class="ed-item full">
         <div class="div-software-libre">
           <h3>Definición de software libre</h3>
           <blockquote>
@@ -198,32 +198,22 @@ require_once('inc/head.php');
             href="/philosophy/free-software-even-more-important.html">un instrumento de
             poder injusto</a>.
           </p>
+          <br>
+          <center>
+          <img src="https://wallscover.com/images/debian-wallpaper-3.jpg">
+          </center>
         </div>
-      </div>
-      <div class="ed-item m-50 main-center">
-        <img src="https://minimaloslinux.files.wordpress.com/2016/05/softwarelibre.png?w=648">
       </div>
     </div>
   </div>
-
-
-  <div class="libertad">
-    <div class="ed-container">
-      <div class="ed-item m-50">
-        <div class="ed-libertades">
-          <p> Las 4 libertades esenciales</p>
-        </div>
-      </div>
-      <div class="ed-item m-50">
-        <img src="https://cdn4.iconfinder.com/data/icons/Birdies_by_arrioch/png%20512/pidgin.png" style="height: 50%;">
-      </div>
-    </div>
-  </div>
-<br><br>
-  <div class="main-content">
     <div class="ed-container">
       <div class="ed-item full full">
         <div class="div-software-libre">
+        <hr>  
+        <div class="ed-libertades">
+          <p> Las 4 libertades esenciales</p>
+        </div>
+        <hr>
           <div class="centrar">
             <h3>
               <p>Un programa es software libre si los usuarios tienen las cuatro libertades
@@ -242,6 +232,7 @@ require_once('inc/head.php');
                 <p>La libertad de ejecutar el programa como se desea, con cualquier propósito
                   (libertad 0).</p>
                 </div>
+                <br><br>
                 <div class="ed-item m-40 l-40 item-libertades">
                   <div class="ed-item-libertad">
                     <div class="item-libertad__icon center">
@@ -276,7 +267,9 @@ require_once('inc/head.php');
                   </div>
                 </div>
               </div>
+
               <div class="ed-item full">
+              <br>
                 <p>
                     Un programa es software libre si otorga a los usuarios todas estas
                     libertades de manera adecuada. De lo contrario no es libre. Existen diversos
@@ -305,21 +298,14 @@ require_once('inc/head.php');
 
                     <p>En el resto de esta página tratamos algunos puntos que aclaran qué es lo que
                     hace que las libertades específicas sean adecuadas o no.</p>
+                    <br><br>
+                    <center>
+              <img src="https://2.bp.blogspot.com/-FHovlK70slM/WiDUHowrELI/AAAAAAAADH0/C4pSwWE3slE5otCIdXLa1kZQSLl5EVZmQCLcBGAs/s1600/Unix-Daemon.png" width="50%">
+            </center>
+                    <br><br><br><br>
               </div>
-              <div class="ed-item full" style="display: flex; justify-content: center">
-                <img src="img/HELMI2.png">
-                <br>
-                <img src="img/HELMI1.png">
-              </div>
+              
             </div>
-          </div>
-
-
           <?php require_once ('inc/footer.php');?>
-
-<script src="js/ed-grid.js"></script>
-<script type="text/javascript">
-edgrid.menu('nav','menu');
-</script>
 </body>
 </html>

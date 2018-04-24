@@ -12,11 +12,6 @@ require_once('inc/head.php');
 <div class="main-content">
       <div class="ed-container">
           <div class="ed-item m-12 l-12">
-
-    <center>
-
-
-
            <form onsubmit="return false" class="formulario" id="formInicio">
 
                         <div class="formu-iniciar">
@@ -46,16 +41,11 @@ require_once('inc/head.php');
 
                         </div>
                         <br>
-                        <div class="form-team">
+                        <div class="form-team main-center">
                             <input type="submit"  class="button button-enviar" value="Ingresar" onclick="login(user.value , pass.value);">
                         </div>
 
                     </form>
-
-
-
-
-</center>
           </div>
       </div>
   </div>

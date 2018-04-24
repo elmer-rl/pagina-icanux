@@ -145,7 +145,7 @@ function paginar(){
   
   $.ajax({
   type: 'POST',
-  url: urlweb + 'inc/cargar.php',
+  url: urlweb + 'cargar.php',
   data: 'paginar=yes',
   success: function(respuesta){
     //Cargar nuevos posts
@@ -206,9 +206,6 @@ function paginarr(){
 
 
 
-
-
-
  function agregar (titulo, categoria, contenido){
     if (titulo.trim() != '' && categoria.trim() != '' && contenido.trim() != ''){
         //enviar registro
@@ -229,12 +226,10 @@ function paginarr(){
                //redireccionar al post nuevo
                
               location.href =respuesta;
-              }
-              
+              }  
           }
         });
       }
-
       else if (categoria.trim() != "1"){
 
           var formData = new FormData($("#formAgregar")[0]);
@@ -252,8 +247,7 @@ $.ajax({
                //redireccionar al post nuevo
                
               location.href =respuesta;
-              }
-              
+              }       
           }
         });
    }}
@@ -264,12 +258,6 @@ $.ajax({
    }
 
 }
-
-
-
-
-
-
   function login(user, pass){
     if (user.trim() != '' && pass.trim() != ''){
       	//enviar registro

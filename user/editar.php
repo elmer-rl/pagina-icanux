@@ -1,4 +1,4 @@
-<?php require_once ('../conexion.php');
+<?php require_once ('conexion.php');
 
 $menu = 'editar';
 if (!isset($_SESSION['iduser'])) {header('location:'.$dato[0]);
@@ -25,22 +25,10 @@ if (isset($_POST['nam'])) {
 
 	header('Location:'.$dato[0].'user/editar.php');
 }
-
+require_once('inc/head.php');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>perfil  </title>
-  <link rel="shorcut icon" type="image/x-icon" href="<?php echo $dato[0];?>img/HELMI1.ico">
-  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/base.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/styles.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo $dato[0];?>css/my-style.css">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-</head>
 <body class="fondo-oscuro">
-<?php include '../inc/header.php';?>
+<?php include 'inc/header.php';?>
 
 <div class="main-content fondo-blanco relleno-8 borde-negro">
       <div class="ed-container">
@@ -123,12 +111,7 @@ if (isset($_POST['nam'])) {
   </div>
 
 
-<?php include '../inc/footer.php';?>
-
-</body>
-   <script type="text/javascript" src="<?php echo $dato[0];?>js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="<?php echo $dato[0];?>js/base.js"></script>
-  <script type="text/javascript" src="<?php echo $dato[0];?>/js/efectos.js"></script>
+<?php include 'inc/footer.php';?>
 </body>
 </html>
 

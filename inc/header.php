@@ -20,7 +20,7 @@ if ($iduser) {
 <header class="main-header" style="background-color: black">
 <div class="ed-container">
 <div class="ed-item s-70 l-30">
-<a href="<?php echo $dato[0];?>"><img src="<?php echo $dato[0];?>img/15158675841515047669banner.png" alt="logo-icanux" class="logo"></a>
+<a href="<?php echo $dato[0];?>"><img src="static/img/15158675841515047669banner.png" alt="logo-icanux" class="logo"></a>
 </div>
 <div class="ed-item s-30 l-70 cross-center main-end">
 <div class="nav-toggle" id="nav-toggle">
@@ -81,12 +81,16 @@ if ($iduser) {
 <?php }?>
 <li>
 <?php if (!isset($_SESSION['iduser'])) {?>
-<li><a href="<?php echo $dato[0];?>iniciar"  class=" button button-enviar">Iniciar</a> </li>
+<li
+<?php if ($menu == 'agregar') {echo 'class="menu-activo"';
+}
+
+?>><a href="<?php echo $dato[0];?>iniciar">Iniciar</a> </li>
 <li> <a href="<?php echo $dato[0];?>registro" class=" button">Registrarse</a> </li>
 <?php } else {
 ?>
 <li> <a href="<?php echo $dato[0];?>user/perfil"  class="user-image">
-<img src="<?php echo $dato[0];?>user/avatar/<?php echo $datos_perfil['avatar'];?>" class="img-helmi">
+<img src="<?php echo $dato[0];?>static/avatar/<?php echo $datos_perfil['avatar'];?>" class="img-helmi"> 
 	 <!-- <?php echo $_SESSION['nombreuser'];
 	?> --></a></li> <br>
 	<li><a href="<?php echo $dato[0];?>inc/salir.php?cerrar=yes" class=" button button-salir">Salir

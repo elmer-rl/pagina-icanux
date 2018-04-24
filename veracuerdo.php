@@ -79,8 +79,7 @@ require_once('inc/head.php');
         </p>
     </div>
 <?php }?>
-    <br>
-    <br>
+
     </div
     </div>
     </div>
@@ -104,8 +103,6 @@ require_once('inc/head.php');
 
         })  ;
 </script>
-<script type="text/javascript" src="js/base.js"></script>
-<script type="text/javascript" src="/js/efectos.js"></script>
 </body>
 </html>
 

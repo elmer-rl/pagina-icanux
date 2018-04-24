@@ -1,14 +1,8 @@
-  <script type="text/javascript" src="static/js/efectos.js"></script>
-  <script type="text/javascript" src="static/js/ed-grid.js"></script>
-  <script type="text/javascript">
-edgrid.menu('nav','menu');
-</script>
-
+<?php if ($menu != 'iniciar'){ ?>
 <footer class="main-footer">
       <div class="main-content ed-container">
         <div class="ed-item l-1-3 m-1-3">
           <h1>Icanux</h1>
-
           Comunidad de software libre
         </div>
         <div class="ed-item l-1-3 m-1-3">
@@ -22,7 +16,22 @@ edgrid.menu('nav','menu');
           </div>
 
           <div class="ed-item m-100 l-100">
-           <p> Desarrollado por Elmer Ramos Loayza  - todos los derechos reservados &copy; Copyright <?php echo date('Y');?></p>
+           <p> Desarrollado por Elmer Ramos Loayza  - Icanux <?php echo date('Y');?></p>
           </div>
         </div>
-      </footer>
+</footer>
+   <script type="text/javascript" src="static/js/efectos.js"></script>
+  <script type="text/javascript" src="static/js/ed-grid.js"></script>
+  <script type="text/javascript">
+edgrid.menu('nav','menu');
+</script>
+<?php }
+else{ ?>
+   <script type="text/javascript" src="static/js/efectos.js"></script>
+  <script type="text/javascript" src="static/js/ed-grid.js"></script>
+  <script type="text/javascript">
+edgrid.menu('nav','menu');
+</script>
+
+ <?php } ?>
+

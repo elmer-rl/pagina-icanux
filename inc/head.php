@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Icanux</title>
-  <base href="<?=dirname($_SERVER['SCRIPT_NAME']);?>/" />
+  <base href="<?=dirname($_SERVER['SCRIPT_NAME']);?>" />
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="icon" type="image/x-icon" href="static/img/HELMI1.ico">
     <link rel="stylesheet" type="text/css" href="static/css/base.css">

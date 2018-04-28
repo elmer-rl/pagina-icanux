@@ -9,6 +9,9 @@
     del patrón entre llaves.
     */
 
+    // Ajax
+    ['^ajax/(?<app>.+?)$', 'ajax/{app}.php'],
+
     // Posts
     ['^post/(?<id>.+?)$', 'verpost.php'],
 
@@ -25,6 +28,6 @@
 
     // Este patrón es cuando la ruta está vacía, el equivalente a 'index.html'
     ['', 'inicio.php'],
-    
+
 
 ];

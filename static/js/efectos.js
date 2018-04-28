@@ -12,17 +12,17 @@
   processData: false,
   success: function(respuesta){
     //Refrescar imagen
-   
+
     $('#formAvatar')[0].reset();
     $('#imgenavatar').attr('src', respuesta);
 
-      
+
   }
   });
 
  }
 function comentar_ajax(mensaje){
-  
+
     if(mensaje.trim()==''){
       //error
     $('#comentar-error').fadeIn(500);
@@ -32,19 +32,19 @@ function comentar_ajax(mensaje){
       $.ajax({
       type: 'POST',
       url: urlweb + 'inc/addcoment.php',
-      data: 'mensaje=' + mensaje, 
+      data: 'mensaje=' + mensaje,
       success: function(respuesta){
 
         if(respuesta.trim()!='error'){
           $('#comentarios').append(respuesta);
           location.reload();
         }
-              
+
       }
       });
     }
-    
-    
+
+
 
 }
 
@@ -68,7 +68,7 @@ function subir_img_tiemporeal(valor){
     }
     });
   }
-  
+
 }
 
 
@@ -124,7 +124,7 @@ function validar_editaruser(valor){
 
 
 
-function validar_logo(valor){ 
+function validar_logo(valor){
 
   if(valor.trim()!=''){
     //ok
@@ -142,7 +142,7 @@ function validar_logo(valor){
 
 
 function paginar(){
-  
+
   $.ajax({
   type: 'POST',
   url: urlweb + 'cargar.php',
@@ -151,7 +151,7 @@ function paginar(){
     //Cargar nuevos posts
     //cargar
     if(respuesta!=''){
-    $('#listar').append(respuesta);    
+    $('#listar').append(respuesta);
     } else{
       $('#cargar').hide();
     }
@@ -164,7 +164,7 @@ function paginar(){
 
 
 function eliminar_imagen(elemento,nombre){
-  
+
   $.ajax({
   type: 'POST',
   url: urlweb + 'inc/eliminar.php',
@@ -185,7 +185,7 @@ function eliminar_imagen(elemento,nombre){
 
 
 function paginarr(){
-  
+
   $.ajax({
   type: 'POST',
   url: urlweb + 'inc/cargarr.php',
@@ -194,7 +194,7 @@ function paginarr(){
     //Cargar nuevos posts
     //cargar
     if(respuesta!=''){
-    $('#listar').append(respuesta);    
+    $('#listar').append(respuesta);
     } else{
       $('#cargar').hide();
     }
@@ -211,22 +211,22 @@ function paginarr(){
         //enviar registro
         if (categoria.trim() != "2") {
          var formData = new FormData($("#formAgregar")[0]);
-         
+
         $.ajax({
           type:'POST',
           url: urlweb + 'inc/addpost.php',
           cache: false,
           //ata: 'user' + user + '&correo' + correo + '&pass1',
-          data: formData,  
+          data: formData,
            contentType: false,
             processData: false,
           success:function(respuesta){
             console.log(respuesta)
               if (respuesta.trim()!='error') {
                //redireccionar al post nuevo
-               
+
               location.href =respuesta;
-              }  
+              }
           }
         });
       }
@@ -238,16 +238,16 @@ $.ajax({
           url: urlweb + 'inc/addpostA.php',
           cache: false,
           //ata: 'user' + user + '&correo' + correo + '&pass1',
-          data: formData,  
+          data: formData,
            contentType: false,
             processData: false,
           success:function(respuesta){
             console.log(respuesta)
               if (respuesta.trim()!='error') {
                //redireccionar al post nuevo
-               
+
               location.href =respuesta;
-              }       
+              }
           }
         });
    }}
@@ -313,7 +313,7 @@ $.ajax({
           //funcion ajax|
           $.ajax({
             type:'POST',
-            url: urlweb + 'inc/adduser.php',
+            url: urlweb + 'ajax/adduser',
             cache: false,
             //data: 'user' + user + '&correo' + correo + '&pass1',
             data: $('#formRegistro').serialize(),
@@ -328,6 +328,9 @@ $.ajax({
                   $('#registro-mensaje').fadeIn(500);
                 $('#registro-mensaje').text('correo ya existente');
                 }
+            },
+            error: function(XHR, textStatus, errorThrown) {
+              console.log("ERROR! " + textStatus + ":" + errorThrown)
             }
           });
         }

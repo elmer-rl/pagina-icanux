@@ -1,4 +1,4 @@
-<?php require_once ('../conexion.php');
+<?php require_once ('conexion.php');
 
 //valdidar formulario
 //
@@ -21,7 +21,7 @@ if ($cantidad_email == 0) {
 		formatearcadena($_POST['ap'], 'text'),
 		formatearcadena($_POST['user'], 'text'),
 		formatearcadena($_POST['correo'], 'text'),
-		formatearcadena(md5($_POST['pass1']), 'text'),
+		formatearcadena(password_hash($_POST['pass1'], PASSWORD_DEFAULT), 'text'),
 		formatearcadena($_POST['num'], 'text'),
 		formatearcadena(1, 'int'));
 

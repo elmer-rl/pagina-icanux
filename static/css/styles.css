@@ -719,7 +719,7 @@ body.sticky-footer {
   color: black; }
 
 .cabecera {
-    background-image: url(https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-65249.jpg);
+    background-image: url(static/img/wall.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
